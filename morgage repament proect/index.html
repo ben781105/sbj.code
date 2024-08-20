@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="favicon-32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+    <div class="container">
+        <div class="calculator">
+            <div class="calculator-heading">
+                <span>Mortgage calculator</span>
+                <span onclick="clearAll()" id="clear-all" style="cursor: pointer; text-decoration: underline;">clear all</span>
+            </div>
+            <label for="mortgage-amount" style="position: absolute; top:50px;">Mortgage amount</label><br>
+            <input type="text" name="Amount" id="mortgage-amount" placeholder="$"><br>
+            <div class="mortgage-inputs">
+            <span>
+            <label for="mortgage-term">Mortgage-term</label>
+            <input type="text" name="term" id="mortgage-term" placeholder="YEARS" required style="margin-top: 5px;"></span>
+            </span>
+            <span>
+            <label for="interest-rate" id="interest-label">Interest rate</label>
+            <input type="text" name="rate" id="interest-rate" style="margin-top: 5px;" placeholder="%" required></div>
+        </span>
+        <h4>Mortgage Type</h4>
+        <div class="mortgage-type1">
+            <input type="radio"id="repayment" name="radio">
+            <label for="repayment" style="font-size: 15px;">Repayment</label>
+        </div>
+        <div class="mortgage-type2">
+        <input type="radio" id="interest" name="radio">
+        <label for="interest" style="font-size: 15px;">Interest only</label>
+        </div>
+        <button id="calculate-button" onclick="calculateFormula()"><span><img src="icon-calculator.svg" alt=""></span>Calculate repayments</button>
+        </div>
+        <div class="results">
+            <div id="results-empty">
+                <div><img src="illustration-empty.svg" height="150px" alt=""></div>
+                <h2>Results are shown here</h2>
+                <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be</p>
+            </div>
+            <div id="results-active">
+                <h3>Your results</h3>
+            <p>Your results are shown below based on the information provided. To adjust the results, edit the form and click "calculate repayments" again</p>
+            <div class="monthly-repayments">
+                <h5>Your monthly repayments</h5>
+                <div id="monthly-income"></div>
+                <h5>Total you'll repay over the term</h5>
+                <div id="total-income"></div>
+            </div>
+            </div>
+        </div>
+        
+    </div>
+    <p id="declaration">coded by ben@rd SJ</p>
+    </div>
+    <script src="index.js" defer></script>
+</body>
+</html>
